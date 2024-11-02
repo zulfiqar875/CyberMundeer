@@ -14,9 +14,9 @@ body {
 
 /* Header styles */
 .header {
-    background-color: #333; /* Dark background */
+    background-color: #000000; /* Dark background */
     padding: 20px; /* Space around the header */
-    color: white; /* Text color */
+    color: #00ff88; /* Text color */
     display: flex; /* Flexbox layout */
     justify-content: space-between; /* Space between elements */
     align-items: center; /* Center items vertically */
@@ -28,7 +28,7 @@ body {
 }
 
 .navbar a {
-    color: white; /* Link text color */
+    color: #00ff88; /* Link text color */
     text-decoration: none; /* Remove underline */
     padding: 15px 20px; /* Space around links */
     transition: background-color 0.3s; /* Smooth background color change */
@@ -36,7 +36,7 @@ body {
 
 /* Hover effect for nav links */
 .navbar a:hover {
-    background-color: #575757; /* Darker background on hover */
+    background-color: #000000; /* Darker background on hover */
     border-radius: 5px; /* Rounded corners */
 }
 
