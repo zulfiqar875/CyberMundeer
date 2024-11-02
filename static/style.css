@@ -1,82 +1,176 @@
-/* General styles for body */
-body {
+/* Basic Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light background color */
+    color: #ffffff;
+    background-color: #121212;
+    overflow: hidden;
 }
 
-/* Header styles */
+/* Header */
 .header {
-    background-color: #333; /* Dark background */
-    padding: 20px; /* Space around the header */
-    color: white; /* Text color */
-    display: flex; /* Flexbox layout */
-    justify-content: space-between; /* Space between elements */
-    align-items: center; /* Center items vertically */
+    width: 100%;
+    padding: 15px 0;
+    background-color: #0d0d0d;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
-/* Navbar styles */
-.navbar {
-    display: flex; /* Flexbox layout for nav links */
+.header h2 {
+    color: #00ff88;
+    font-size: 1.5em;
+    display: inline;
 }
 
-.navbar a {
-    color: white; /* Link text color */
-    text-decoration: none; /* Remove underline */
-    padding: 15px 20px; /* Space around links */
-    transition: background-color 0.3s; /* Smooth background color change */
+.header nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* Hover effect for nav links */
-.navbar a:hover {
-    background-color: #575757; /* Darker background on hover */
-    border-radius: 5px; /* Rounded corners */
+.header nav a:hover {
+    color: #00ff88;
 }
 
-/* Hero section styles */
+/* Hero Section */
 .hero {
-    position: relative; /* Position relative for absolute children */
-    height: 60vh; /* Full height for hero */
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    color: white; /* Text color */
-    background: linear-gradient(135deg, #007BFF, #00BFFF); /* Gradient background */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 80px;
 }
 
-/* Content inside hero section */
 .content {
-    text-align: center; /* Center text */
+    max-width: 700px;
+    animation: fadeIn 2s ease;
 }
 
 .title {
-    font-size: 2.5em; /* Large title font size */
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00ff88;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 .subtitle {
-    font-size: 1.5em; /* Smaller subtitle font size */
+    font-size: 1.3em;
+    color: #ccc;
+    margin-top: 10px;
+    animation: slideUp 1.5s ease;
+}
+
+.author {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #666;
 }
 
 .cta-button {
-    background-color: #ff4081; /* Call to action button color */
-    color: white; /* Button text color */
-    padding: 10px 20px; /* Button padding */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth background color change */
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #00ff88;
+    color: #121212;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    animation: pulse 1.5s infinite;
 }
 
 .cta-button:hover {
-    background-color: #e91e63; /* Darker shade on hover */
+    background-color: #00cc6f;
 }
 
-/* Footer styles */
+/* Background Cybersecurity Animation */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 0, 0, 0.8)), url("https://source.unsplash.com/1920x1080/?cybersecurity,technology");
+    background-size: cover;
+    background-blend-mode: overlay;
+    opacity: 0.3;
+    animation: glitch 3s infinite;
+    z-index: -1;
+}
+
+/* Grid Effect */
+.background-animation::before,
+.background-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1) 0,
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 30px
+    );
+    z-index: -1;
+}
+
+.background-animation::after {
+    transform: rotate(90deg);
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88; }
+    to { text-shadow: 0 0 20px #00ff88, 0 0 30px #00ff88, 0 0 40px #00ff88; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes glitch {
+    0%, 100% { transform: skew(0deg); }
+    25% { transform: skew(5deg, 5deg); }
+    50% { transform: skew(-5deg, -5deg); }
+    75% { transform: skew(3deg, 3deg); }
+}
+
+/* Footer */
 .footer {
-    background-color: #333; /* Dark footer background */
-    color: white; /* Footer text color */
-    text-align: center; /* Center text */
-    padding: 15px; /* Padding around footer */
-    position: relative; /* Relative positioning */
-    bottom: 0; /* Align to bottom */
-    width: 100%; /* Full width */
+    width: 100%;
+    padding: 15px 0;
+    background-color: #0d0d0d;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.footer p {
+    margin: 0;
 }
