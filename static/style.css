@@ -12,33 +12,32 @@ body {
     overflow: hidden;
 }
 
-/* Header */
+/* Header styles */
 .header {
-    width: 100%;
-    padding: 15px 0;
-    background-color: #0d0d0d;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    z-index: 10;
+    background-color: #333; /* Dark background */
+    padding: 20px; /* Space around the header */
+    color: white; /* Text color */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
 }
 
-.header h2 {
-    color: #00ff88;
-    font-size: 1.5em;
-    display: inline;
+/* Navbar styles */
+.navbar {
+    display: flex; /* Flexbox layout for nav links */
 }
 
-.header nav a {
-    color: #ffffff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+.navbar a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    padding: 15px 20px; /* Space around links */
+    transition: background-color 0.3s; /* Smooth background color change */
 }
 
-.header nav a:hover {
-    color: #00ff88;
+/* Hover effect for nav links */
+.navbar a:hover {
+    background-color: #575757; /* Darker background on hover */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Hero Section */
