@@ -14,7 +14,7 @@ body {
 
 /* Header styles */
 .header {
-    background-color: #000000; /* Dark background */
+    background-color: #0d0d0d; /* Dark background */
     padding: 20px; /* Space around the header */
     color: #00ff88; /* Text color */
     display: flex; /* Flexbox layout */
