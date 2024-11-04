@@ -27,6 +27,11 @@ body {
     display: flex; /* Flexbox layout for nav links */
 }
 
+.head-title{
+    font-family: 'Major Mono Display';
+
+}
+
 .navbar a {
     color: #00ff88; /* Link text color */
     text-decoration: none; /* Remove underline */
