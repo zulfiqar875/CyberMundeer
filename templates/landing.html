@@ -11,13 +11,7 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="background-animation"></div>
-        <div class="content">
-            <div class="logo-frame">
-                <div class="logo-text">
-                  <span class="cyber">C<span class="triangle"></span>BER</span>
-                  <span class="mundeer">M<span class="square"></span>NDEER</span>
-                </div>
-            </div>
+            <div class="logo">Cyber Mundeer</div>
             <p class="subtitle">Your ultimate journey into the future of cybersecurity.</p>
             <a href="#explore" class="cta-button">Start Your Journey</a>
         </div>
@@ -28,4 +22,13 @@
         <p>&copy; 2024 Cyber Mundeer | Developed by Areon</p>
     </footer>
 </body>
+<script>
+    // Show the logo only on the first visit
+    if (!localStorage.getItem('visited')) {
+        document.body.style.display = 'flex';
+        localStorage.setItem('visited', 'true');
+    } else {
+        document.body.style.display = 'none'; // Hide on subsequent visits
+    }
+</script>
 </html>

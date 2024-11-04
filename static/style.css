@@ -27,92 +27,44 @@ body {
     display: flex; /* Flexbox layout for nav links */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000;
-  }
-  
-  .logo-frame {
-    border: 2px solid #6c63ff; /* Purple border */
-    padding: 10px 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .logo-frame::before, .logo-frame::after {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    position: absolute;
-    border-radius: 50%;
-  }
-  
-  .logo-frame::before {
-    top: -6px;
-    left: -6px;
-  }
-  
-  .logo-frame::after {
-    bottom: -6px;
-    right: -6px;
-  }
-  
-  .logo-text {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    color: #fff;
-    font-size: 3rem;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .cyber {
-    display: flex;
-    align-items: center;
-    color: #fff;
-  }
-  
-  .mundeer {
-    display: flex;
-    align-items: center;
-    color: #fff;
-  }
-  
-  /* Geometric Shapes */
-  .triangle {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid #fff;
-    margin-right: 5px;
-  }
-  
-  .square {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    margin-right: 5px;
-  }
-  
+.logo {
+    font-family: 'Courier New', monospace; /* Monospace font for a hacker vibe */
+    font-size: 4rem; /* Larger font size */
+    color: #ff0033; /* Bright red color */
+    text-shadow: 0 0 5px rgba(255, 0, 51, 0.6), 
+                 0 0 10px rgba(255, 0, 51, 0.8),
+                 0 0 15px rgba(255, 0, 51, 1); /* Blood-like glow */
+    animation: glitch 1.5s infinite alternate; /* Animation effect */
+}
 
 .navbar a {
     color: #00ff88; /* Link text color */
     text-decoration: none; /* Remove underline */
     padding: 15px 20px; /* Space around links */
     transition: background-color 0.3s; /* Smooth background color change */
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    25% {
+        transform: translate(-2px, -2px);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(2px, 2px);
+        opacity: 0.6;
+    }
+    75% {
+        transform: translate(-2px, 2px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(2px, -2px);
+        opacity: 1;
+    }
 }
 
 /* Hover effect for nav links */
