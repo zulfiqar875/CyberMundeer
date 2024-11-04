@@ -27,10 +27,86 @@ body {
     display: flex; /* Flexbox layout for nav links */
 }
 
-.head-title{
-    font-family: 'Major Mono Display';
-
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+  }
+  
+  .logo-frame {
+    border: 2px solid #6c63ff; /* Purple border */
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .logo-frame::before, .logo-frame::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .logo-frame::before {
+    top: -6px;
+    left: -6px;
+  }
+  
+  .logo-frame::after {
+    bottom: -6px;
+    right: -6px;
+  }
+  
+  .logo-text {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .cyber {
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .mundeer {
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  /* Geometric Shapes */
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #fff;
+    margin-right: 5px;
+  }
+  
+  .square {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    margin-right: 5px;
+  }
+  
 
 .navbar a {
     color: #00ff88; /* Link text color */
