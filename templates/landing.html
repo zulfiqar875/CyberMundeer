@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Mundeer Logo</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <title>Cyber Mundeer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="logo">Cyber Mundeer</div>
-    <script>
-        // Show the logo only on the first visit
-        if (!localStorage.getItem('visited')) {
-            document.body.style.display = 'flex';
-            localStorage.setItem('visited', 'true');
-        } else {
-            document.body.style.display = 'none'; // Hide on subsequent visits
-        }
-    </script>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="background-animation"></div>
+        <div class="content">
+            <h1 class="title head-title"><span class="highlight">Cyber Mundeer</span></h1>
+            <p class="subtitle">Your ultimate journey into the future of cybersecurity.</p>
+            <a href="#explore" class="cta-button">Start Your Journey</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Cyber Mundeer | Developed by Areon</p>
+    </footer>
 </body>
 </html>
